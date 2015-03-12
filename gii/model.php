@@ -17,7 +17,7 @@ $columns = [];
 foreach ($tableSchema->columns as $column) {
     $columns[] = "'$column->name'";
 }
-array_unshift($rules, '[[\'title\'], \'filter\', \'filter\' => [\'demi\helpers\Str\', \'normalize\']]');
+array_unshift($rules, "[['title'], 'filter', 'filter' => ['demi\\helpers\\Str', 'normalize']]");
 
 echo "<?php\n";
 ?>
