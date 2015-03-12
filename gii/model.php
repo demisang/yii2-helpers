@@ -17,6 +17,7 @@ $columns = [];
 foreach ($tableSchema->columns as $column) {
     $columns[] = "'$column->name'";
 }
+array_unshift($rules, '[[\'title\'], \'filter\', \'filter\' => [\'demi\helpers\Str\', \'normalize\']]');
 
 echo "<?php\n";
 ?>
@@ -74,7 +75,7 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') . 
      */
     public function rules()
     {
-        return [<?= "\n            " . implode(",\n            ", $rules) . "\n        " ?>];
+        return [<?= "\n            " . implode(",\n            ", $rules) . ",\n        " ?>];
     }
 
     /**
@@ -106,7 +107,7 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') . 
     {
         return [
             [
-                'class' => \common\components\TimestampBehavior::className(),
+                'class' => 'demi\behaviors\TimestampBehavior',
                 'createdAtAttribute' => 'created_at',
                 'updatedAtAttribute' => 'updated_at',
             ],
@@ -122,7 +123,7 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') . 
             return false;
         }
 
-        // что-нибудь...
+        // something...
 
         return true;
     }
@@ -132,7 +133,7 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') . 
      */
     public function afterSave($insert, $changedAttributes)
     {
-        // что-нибудь...
+        // something...
 
         parent::afterSave($insert, $changedAttributes);
     }
@@ -145,7 +146,7 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') . 
             return false;
         }
 
-        // не забудь удалить связанные данные!
+        // Do not forget delete the related data!
 
         return true;
     }
