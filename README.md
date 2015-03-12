@@ -35,3 +35,15 @@ return [
 
 Usage
 -----
+gii model generator
+```php
+$config['modules']['gii'] = [
+    'class'      => 'yii\gii\Module',
+    'generators' => [
+        'model'   => [
+            'class'     => 'yii\gii\generators\model\Generator',
+            'templates' => ['my_model' => '@demi/helpers/gii/model']
+        ]
+    ]
+];
+```
