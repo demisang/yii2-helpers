@@ -42,7 +42,7 @@ $config['modules']['gii'] = [
     'generators' => [
         'model'   => [
             'class'     => 'yii\gii\generators\model\Generator',
-            'templates' => ['my_model' => '@demi/helpers/gii/model']
+            'templates' => ['my_model' => '@demi/helpers/gii'],
         ]
     ]
 ];
