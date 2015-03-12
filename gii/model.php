@@ -12,7 +12,7 @@
 /* @var $rules string[] list of validation rules */
 /* @var $relations array list of relations (name => relation declaration) */
 
-// Генерируем массив колонок:
+// Generate an array of columns:
 $columns = [];
 foreach ($tableSchema->columns as $column) {
     $columns[] = "'$column->name'";
