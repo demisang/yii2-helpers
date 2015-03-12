@@ -107,7 +107,7 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') . 
     {
         return [
             [
-                'class' => 'demi\behaviors\TimestampBehavior',
+                'class' => 'demi\helpers\behaviors\TimestampBehavior',
                 'createdAtAttribute' => 'created_at',
                 'updatedAtAttribute' => 'updated_at',
             ],
