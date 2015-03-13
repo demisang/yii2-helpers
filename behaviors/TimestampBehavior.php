@@ -1,6 +1,6 @@
 <?php
 
-namespace common\components;
+namespace demi\helpers\behaviors;
 
 use yii\db\Expression;
 
