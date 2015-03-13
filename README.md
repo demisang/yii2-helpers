@@ -47,3 +47,11 @@ $config['modules']['gii'] = [
     ]
 ];
 ```
+big action grid column
+```php
+<?= GridView::widget([
+    'columns' => [
+        ['class' => 'demi\helpers\grid\BigActionColumn'],
+    ],
+]); ?>
+```
