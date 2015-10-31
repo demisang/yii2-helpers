@@ -50,9 +50,10 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->queryBaseClass, '\\
     "$tableName.<?= $column->name ?>",
         <?php endforeach ?>]);
 
+        $this->orderBy(["$tableName.created_at" => SORT_DESC]);
+
         return $this;
     }*/
-
 
     /**
      * Filter only active data
@@ -61,7 +62,7 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->queryBaseClass, '\\
      */
     /*public function active()
     {
-        $this->andWhere('[[status]]=1');
+        $this->andWhere(['<?= $tableName ?>.status' => <?= $modelFullClassName ?>::STATUS_ACTIVE]);
 
         return $this;
     }*/
