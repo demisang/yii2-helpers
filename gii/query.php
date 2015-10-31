@@ -36,11 +36,11 @@ namespace <?= $generator->queryNs ?>;
  */
 class <?= $className ?> extends <?= '\\' . ltrim($generator->queryBaseClass, '\\') . "\n" ?>
 {
-/**
-* Add general conditions to listing search
-*
-* @return static
-*/
+    /**
+     * Add general conditions
+     *
+     * @return static
+     */
     /*public function general()
     {
         $tableName = '<?= $tableName ?>';
@@ -54,9 +54,15 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->queryBaseClass, '\\
     }*/
 
 
+    /**
+     * Filter only active data
+     *
+     * @return static
+     */
     /*public function active()
     {
         $this->andWhere('[[status]]=1');
+
         return $this;
     }*/
 
