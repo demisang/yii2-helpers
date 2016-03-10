@@ -156,13 +156,9 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') . 
     /**
      * @inheritdoc
      */
-    public function beforeDelete() {
-        if (!parent::beforeDelete()) {
-            return false;
-        }
-
+    public function afterDelete() {
         // Do not forget delete the related data!
 
-        return true;
+        parent::afterDelete();
     }
 }
