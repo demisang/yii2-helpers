@@ -18,7 +18,7 @@ class BigActionColumn extends ActionColumn
      * As an example, to only have the view, and update button you can add the ActionColumn to your GridView columns as follows:
      *
      * ```
-     * ['class' => 'yii\grid\ActionColumn', 'template' => '{view} {update}'],
+     * ['class' => 'demi\helpers\grid\BigActionColumn', 'template' => '<div class="btn-group" role="group">{view}</div>'],
      * ```
      *
      * @see buttons

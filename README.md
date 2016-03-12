@@ -5,21 +5,12 @@ A set of Yii2 helpers
 
 Installation
 ------------
-Add to composer.json in your project
-```json
-{
-	"require":
-	{
-  		"demi/helpers": "dev-master"
-	}
-}
-```
-then run command
+Run
 ```code
-php composer.phar update
+php composer.phar require "demi/helpers" "dev-master"
 ```
 
-Configuration
+# Configuration
 -------------
 For enabling PHP 5.5 password hashing by Yii secure component:
 In config file common/config/main.php:
