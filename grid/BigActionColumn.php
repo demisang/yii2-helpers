@@ -24,7 +24,18 @@ class BigActionColumn extends ActionColumn
      * @see buttons
      */
     public $template = '<div class="btn-group" role="group">{view} {update} {delete}</div>';
+    /**
+     * @inheritdoc
+     */
+    public $headerOptions = ['class' => 'action-column', 'style' => 'min-width: 135px;'];
+    /**
+     * @inheritdoc
+     */
+    public $contentOptions = ['style' => 'text-align: center;'];
 
+    /**
+     * @inheritdoc
+     */
     protected function initDefaultButtons()
     {
         if (!isset($this->buttons['view'])) {
