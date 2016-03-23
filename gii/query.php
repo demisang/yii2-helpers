@@ -39,7 +39,7 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->queryBaseClass, '\\
     /**
      * Add general conditions
      *
-     * @return static
+     * @return $this
      */
     /*public function general()
     {
@@ -58,7 +58,7 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->queryBaseClass, '\\
     /**
      * Filter only active data
      *
-     * @return static
+     * @return $this
      */
     /*public function active()
     {
