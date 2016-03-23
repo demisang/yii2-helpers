@@ -43,7 +43,7 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->queryBaseClass, '\\
      */
     /*public function general()
     {
-        $tableName = '<?= $tableName ?>';
+        $tableName = <?= $modelFullClassName ?>::tableName();
 
         $this->select([
         <?php foreach ($tableSchema->columns as $column): ?>
