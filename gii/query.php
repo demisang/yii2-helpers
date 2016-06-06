@@ -11,7 +11,7 @@
 /* @var $labels string[] list of attribute labels (name => label) */
 /* @var $rules string[] list of validation rules */
 /* @var $relations array list of relations (name => relation declaration) */
-/* @var $queryClassName string query class name */
+/* @var $queryClassName string queryParams class name */
 /* @var $modelClassName string related model class name */
 
 $modelFullClassName = $modelClassName;
