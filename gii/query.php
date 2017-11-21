@@ -62,9 +62,7 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->queryBaseClass, '\\
      */
     /*public function active()
     {
-        $this->andWhere(['<?= $tableName ?>.status' => <?= $modelFullClassName ?>::STATUS_ACTIVE]);
-
-        return $this;
+        return $this->andWhere(['<?= $tableName ?>.status' => <?= $modelFullClassName ?>::STATUS_ACTIVE]);
     }*/
 
     /**
