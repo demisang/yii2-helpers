@@ -2,7 +2,7 @@
 
 namespace demi\helpers;
 
-use yii\base\Object;
+use yii\base\BaseObject;
 use Yii;
 
 /**
@@ -12,7 +12,7 @@ use Yii;
  *
  * @package common\helpers
  */
-class Password extends Object
+class Password extends BaseObject
 {
     /**
      * Returns the hash of the password
