@@ -35,8 +35,9 @@ use Yii;
 <?php endforeach; ?>
 <?php if (!empty($relations)): ?>
  *
+ * relations
 <?php foreach ($relations as $name => $relation): ?>
- * @property <?= $relation[1] . ($relation[2] ? '[]' : '') . ' $' . lcfirst($name) . "\n" ?>
+ * @property-read <?= $relation[1] . ($relation[2] ? '[]' : '') . ' $' . lcfirst($name) . "\n" ?>
 <?php endforeach; ?>
 <?php endif; ?>
  */
@@ -80,7 +81,7 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') . 
     public function scenarios()
     {
         $scenarios = parent::scenarios();
-        $scenarios['default'] = [<?= implode(', ', $columns); ?>];
+        $scenarios[self::SCENARIO_DEFAULT] = [<?= implode(', ', $columns); ?>];
 
         return $scenarios;
     }
@@ -107,6 +108,8 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') . 
 <?php foreach ($relations as $name => $relation): ?>
 
     /**
+     * <?= $name ?> relation
+     *
      * @return \yii\db\ActiveQuery
      */
     public function get<?= $name ?>()
@@ -123,8 +126,8 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') . 
         return [
             [
                 'class' => 'demi\helpers\behaviors\TimestampBehavior',
-                'createdAtAttribute' => 'created_at',
-                'updatedAtAttribute' => 'updated_at',
+                'createdAtAttribute' => 'createdAt',
+                'updatedAtAttribute' => 'updatedAt',
             ],
         ];
     }
@@ -156,8 +159,9 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') . 
     /**
      * @inheritdoc
      */
-    public function afterDelete() {
-        // Do not forget delete the related data!
+    public function afterDelete()
+    {
+        // Do not forget remove related data!
 
         parent::afterDelete();
     }

@@ -84,4 +84,13 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->queryBaseClass, '\\
     {
         return parent::one($db);
     }
+
+    /**
+     * @inheritdoc
+     * @return \yii\db\BatchQueryResult|<?= $modelFullClassName ?>[]|array
+     */
+    public function each($batchSize = 100, $db = null)
+    {
+        return parent::each($batchSize, $db);
+    }
 }
