@@ -1,4 +1,10 @@
 <?php
+/**
+ * @copyright Copyright (c) 2018 Ivan Orlov
+ * @license   https://github.com/demisang/yii2-helpers/blob/master/LICENSE
+ * @link      https://github.com/demisang/yii2-helpers#readme
+ * @author    Ivan Orlov <gnasimed@gmail.com>
+ */
 
 namespace demi\helpers\console;
 
@@ -6,6 +12,9 @@ use Yii;
 use yii\base\Model;
 use yii\helpers\Console;
 
+/**
+ * Colorized console output helper
+ */
 trait ConsoleOutput
 {
     public function error($message)

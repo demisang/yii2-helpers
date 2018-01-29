@@ -1,4 +1,10 @@
 <?php
+/**
+ * @copyright Copyright (c) 2018 Ivan Orlov
+ * @license   https://github.com/demisang/yii2-helpers/blob/master/LICENSE
+ * @link      https://github.com/demisang/yii2-helpers#readme
+ * @author    Ivan Orlov <gnasimed@gmail.com>
+ */
 
 namespace demi\helpers;
 
@@ -10,7 +16,7 @@ use Yii;
  *
  * @see     http://ru2.php.net/manual/ru/book.password.php
  *
- * @package common\helpers
+ * @deprecated Since Yii 2.0.6 used this hash strategy by default
  */
 class Password extends BaseObject
 {

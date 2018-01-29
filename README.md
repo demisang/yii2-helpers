@@ -7,7 +7,7 @@ Installation
 ------------
 Run
 ```code
-php composer.phar require "demi/helpers" "dev-master"
+composer require "demi/helpers" "dev-master"
 ```
 
 # Configuration
